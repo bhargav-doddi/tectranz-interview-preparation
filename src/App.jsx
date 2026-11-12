@@ -53,15 +53,6 @@ function App() {
                   <a className="button button--primary" href="#contact-title">
                     Apply Now
                   </a>
-                  <button
-                    className="button button--primary"
-                    type="button"
-                    disabled
-                    style={{ opacity: 0.55, cursor: 'not-allowed' }}
-                    title="No approved programme brochure is available yet."
-                  >
-                    Download Brochure
-                  </button>
                 </div>
               </div>
             </section>

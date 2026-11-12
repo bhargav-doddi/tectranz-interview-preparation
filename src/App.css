@@ -2082,6 +2082,12 @@ img {
     height: 72px;
   }
 
+  .site-header__brand {
+    width: 60px;
+    height: 60px;
+    flex-basis: 60px;
+  }
+
   .menu-toggle {
     width: 44px;
     height: 44px;
@@ -2096,38 +2102,49 @@ img {
   }
 
   .hero {
-    min-height: 620px;
+    min-height: min(600px, calc(100vh - 72px));
     align-items: flex-start;
     background-image:
-      linear-gradient(180deg, rgb(247 250 255 / 98%) 0%, rgb(247 250 255 / 72%) 43%, rgb(247 250 255 / 8%) 100%),
+      linear-gradient(
+        180deg,
+        rgb(247 250 255 / 100%) 0%,
+        rgb(247 250 255 / 100%) 30%,
+        rgb(247 250 255 / 94%) 36%,
+        rgb(247 250 255 / 75%) 44%,
+        rgb(247 250 255 / 35%) 54%,
+        rgb(247 250 255 / 0%) 70%
+      ),
       url('/images/ChatGPT-Image-Feb-3-2026-01_30_55-AM.webp');
-    background-position: center top;
+    background-position: center, center calc(100% + 60px);
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, 100% auto;
   }
 
   .hero__inner {
     width: 100%;
-    padding: 42px 18px 0;
+    padding: 36px 18px 0;
     text-align: center;
   }
 
   .hero h1 {
     max-width: 540px;
-    margin: 0 auto 18px;
-    font-size: clamp(30px, 8vw, 42px);
+    margin: 0 auto 10px;
+    font-size: clamp(27px, 7vw, 34px);
     line-height: 1.12;
   }
 
   .hero p {
     max-width: 520px;
     margin: 0 auto;
-    font-size: 15px;
-    line-height: 1.65;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 1.5;
   }
 
   .hero__actions {
     justify-content: center;
     gap: 10px;
-    margin-top: 22px;
+    margin-top: 14px;
   }
 
   .hero .button {
@@ -2206,7 +2223,7 @@ img {
 
 @media (max-width: 420px) {
   .hero {
-    min-height: 600px;
+    min-height: min(600px, calc(100vh - 72px));
   }
 
   .hero__actions,
